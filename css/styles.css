@@ -1,0 +1,10 @@
+@import url(bootstrap.css);
+.all-vehicles{
+  display: flex !important;
+  column-gap: 2px;
+  flex-wrap: wrap;
+  
+}
+.card{
+  width: 200px;
+}
