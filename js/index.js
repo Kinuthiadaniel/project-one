@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
   const vehi = await getData()
   displayVehicle(vehi)
   moreInformation(vehi)
-  
+  searchVehicle(vehi)
   
 })
 
@@ -74,11 +74,15 @@ function moreInformation(vehiclesContainer) {
   })
 }
 
-// function filterVehicles(vehicle){
-//   const form = document.querySelector(".d-flex")
-//   form.addEventListener("input", (event)=>{
-//     const filteredVehicles = vehicle.filter(params=>{
-//       params.attribute.toLowercase().includes(event.target.value.toLowercase());
-//     })
-//   })
-// }
+function searchVehicle(vehicles){
+const form  = document.getElementsByTagName('form');
+form.addEventListener('submit',(event)=>{
+  event.preventDefault();
+  const found = vehicles.filter((vehicle)=>{
+
+  })
+}); 
+
+}
+
+
