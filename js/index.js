@@ -1,11 +1,16 @@
 document.addEventListener("DOMContentLoaded", async (event) => {
+  let baseUrl = "http://localhost:3000/vehicles"
   clickFaq()
   const vehi = await getData()
   displayVehicle(vehi)
   moreInformation(vehi)
-  searchVehicle(vehi)
+  const searched = document.getElementById("searched")
   
-})
+    const form = document.getElementById("form")
+  const search = document.getElementById("search")
+
+
+
 
 function clickFaq() {
   const faq = document.querySelector("#faqs")
@@ -14,7 +19,7 @@ function clickFaq() {
   })
   return faq;
 }
-let baseUrl = "http://localhost:3000/vehicles"
+
 function getData() {
   return fetch(baseUrl, {
     method: "GET",
@@ -74,15 +79,13 @@ function moreInformation(vehiclesContainer) {
   })
 }
 
-function searchVehicle(vehicles){
-const form  = document.getElementsByTagName('form');
-form.addEventListener('submit',(event)=>{
-  event.preventDefault();
-  const found = vehicles.filter((vehicle)=>{
+form.addEventListener('submit',(event) =>{
+  event.preventDefault()
+  const foundCars = vehi.filter((found)=>{
 
+return found.model.toLowerCase().includes(search.value.toLowerCase());
   })
-}); 
-
-}
-
-
+  console.log(foundCars)
+  
+})
+})
