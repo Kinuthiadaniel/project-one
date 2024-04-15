@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async (event) => {
-  let baseUrl = "http://localhost:3000/vehicles"
+  let baseUrl = "https://project-1-json.onrender.com/vehicles"
   clickFaq()
   const vehi = await getData()
   firstVehicle(vehi[0])
