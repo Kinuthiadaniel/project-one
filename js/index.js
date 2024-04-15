@@ -46,10 +46,8 @@ moreInformation(vehi)
             <h5 class="card-title">${vehicle.model}</h5>
             <p class="card-text"> Year : ${vehicle.YoM}</p>
              <form >
-              <div>
-                <input type="number" value="100" min="1" class="col-10"/>
-              </div>
-              <button type="submit" class="btn btn-success btn-sm mx-auto">By Price</button>
+              
+             
               <button type="button" id = "${vehicle.model}"class="btn btn-primary btn-sm mx-auto btn-more ">More Info</button>
              </form>
           </div>
@@ -104,6 +102,10 @@ moreInformation(vehi)
             <h5 class="card-title">${vehicle.model}</h5>
             <p class="card-text"> Year : ${vehicle.YoM}</p>
              <form >
+              <div>
+                <input type="number" value="100" min="1" class="col-10"/>
+              </div>
+              <button type="submit" class="btn btn-success btn-sm mx-auto">By Price</button>
               <button type="button" id = "${vehicle.model}"class="btn btn-primary btn-sm mx-auto btn-more ">More Info</button>
              </form>
           </div>
