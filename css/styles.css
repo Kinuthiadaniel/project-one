@@ -8,3 +8,30 @@
 .card{
   width: 200px;
 }
+#instagram{
+  font-size: 20;
+  font-family: proxima-nova;
+  border: none;
+  background-color: transparent;
+}
+#instagram:hover{
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+#facebook{
+  font-size: 20;
+  font-family: proxima;
+  border: none;
+  background-color: transparent;
+}
+#facebook:hover{
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+#x{
+  width:70px;
+  font-size: 20;
+  font-family: Helvetica;
+  border: none;
+  background-color: transparent;
+}

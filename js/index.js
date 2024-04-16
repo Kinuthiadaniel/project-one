@@ -4,12 +4,12 @@ document.addEventListener("DOMContentLoaded", async (event) => {
   const vehi = await getData()
   firstVehicle(vehi[0])
   displayVehicle(vehi)
-moreInformation(vehi)
+  moreInformation(vehi)
   const searched = document.getElementById("searched")
 
   const form = document.getElementById("form")
   const search = document.getElementById("search")
- 
+
 
 
 
@@ -62,13 +62,13 @@ moreInformation(vehi)
 
   function moreInformation(vehiclesContainer) {
     const viewDetails = document.querySelector("#view-vehicles")
-   
+
     const ul = document.createElement("ul")
 
     const moreInfoBtn = document.querySelectorAll(".btn-more")
     moreInfoBtn.forEach(btn => {
       btn.addEventListener("click", (event) => {
-      viewDetails.innerHTML=""
+        viewDetails.innerHTML = ""
         const found = vehiclesContainer.find((element) => element.model === event.target.id)
         ul.innerHTML = `
     <li> ${found.model}</li>
@@ -127,4 +127,17 @@ moreInformation(vehi)
     viewDetails.appendChild(ul)
 
   }
+  const social = document.getElementById('social')
+  social.innerHTML =`
+  REACH OUT TO US THROUGH OUR SOCIAL HANDLES:
+  <button type="button" id="instagram">
+  <a href="https://www.instagram.com/"><i class="fab fa-instagram">Instagram</i></a>
+  </button>
+  <button type="button" id="facebook">
+  <a href="https://www.Facebook.com/"><i class="fab fa-instagram">Facebook</i></a>
+  </button>
+  <button type="button" id="x">
+  <a href="https://www.x.com/"><i class="fab fa-instagram">X</i></a>
+  </button>
+  `
 })
